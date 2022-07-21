@@ -70,9 +70,6 @@
                                 <th class="px-4 py-3 text-left">
                                     @lang('crud.movies.inputs.original_language')
                                 </th>
-                                <th class="px-4 py-3 text-left">
-                                    @lang('crud.movies.inputs.genre_ids')
-                                </th>
                                 <th class="px-4 py-3 text-right">
                                     @lang('crud.movies.inputs.popularity')
                                 </th>
@@ -118,9 +115,6 @@
                                 </td>
                                 <td class="px-4 py-3 text-left">
                                     {{ $movie->original_language ?? '-' }}
-                                </td>
-                                <td class="px-4 py-3 text-left">
-                                    {{ $item->genres->id }}
                                 </td>
                                 <td class="px-4 py-3 text-right">
                                     {{ $movie->popularity ?? '-' }}

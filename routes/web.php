@@ -20,8 +20,6 @@ use App\Http\Controllers\IndexController;
 */
 
 require __DIR__ . '/auth.php';
-Route::get('/', [IndexController::class, 'index']);
-Route::get('/{category}/{movie?}', [IndexController::class, 'category'])->name('detail');
 Route::middleware(['auth'])
     ->get('/dashboard', function () {
         return view('dashboard');
@@ -35,3 +33,6 @@ Route::prefix('/')
         Route::resource('categories', CategoryController::class);
         Route::resource('movies', MovieController::class);
     });
+
+Route::get('/', [IndexController::class, 'index']);
+Route::get('/{category}/{movie?}', [IndexController::class, 'category'])->name('detail');
